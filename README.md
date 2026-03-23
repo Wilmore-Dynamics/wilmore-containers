@@ -24,7 +24,7 @@ Il est vivement recommandé d'avoir préalablement sécurisé l'hôte avec [Hard
 
 ## Installation & Usage
 ```bash
-git clone [https://github.com/Wilmore-Dynamics/wilmore-containers.git](https://github.com/Wilmore-Dynamics/wilmore-containers.git)
+git clone https://github.com/Wilmore-Dynamics/wilmore-containers.git
 cd wilmore-containers
 chmod +x install.sh
 sudo ./install.sh
@@ -38,5 +38,5 @@ Structure
 - `/tools` : Utilitaires de maintenance et de backup des volumes.
 
 <p align="right">
-<sub>© 2026 Wilmore Dynamics. L'étage au-dessus du socle.</sub>
+<sub>© 2026 Wilmore Dynamics. Moins, mais mieux.</sub>
 </p>
