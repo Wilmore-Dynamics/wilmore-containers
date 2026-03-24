@@ -50,7 +50,13 @@ main_menu() {
     case $choice in
         1) bash engines/docker.sh ;;
         2) bash engines/podman.sh ;;
-        3) sudo -u "${SUDO_USER:-$USER}" bash tools/check-security.sh ;;
+        3) 
+            # On passe l'utilisateur réel à l'audit pour éviter les erreurs de contexte root
+            export TARGET_USER="${SUDO_USER:-$USER}"
+            bash tools/check-security.sh 
+            read -p "Appuyez sur Entrée pour continuer..."
+            main_menu
+            ;;
         4) bash tools/backup-stacks.sh ;;
         5) bash tools/ufw-docker-patch.sh ;;
         6) echo "À bientôt."; exit 0 ;;
