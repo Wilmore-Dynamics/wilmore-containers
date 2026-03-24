@@ -6,10 +6,11 @@ BOLD='\033[1m'
 GREEN='\033[0;32m'
 BLUE='\033[0;34m'
 RED='\033[0;31m'
-NC='\033[0m'
+NC='\033[0m
+'
+EXIT_CODE=0
 
 # Définition de l'utilisateur à auditer
-# On privilégie la variable passée par le menu, puis le SUDO_USER, puis l'user actuel
 AUDIT_USER="${TARGET_USER:-${SUDO_USER:-$USER}}"
 
 # Sécurité : Si on tombe sur root, on bascule par défaut sur 'ab' (ton user atelier)
