@@ -1,0 +1,28 @@
+[Unit]
+Description=Wilmore Blueprint Service
+After=network-online.target
+
+[Container]
+# Image à utiliser (ex: localhost/wilmore-web:latest)
+Image={{IMAGE_NAME}}
+
+# Réseau & Ports
+PublishPort=3000:3000
+
+# Sécurité Rootless Hardened
+ReadOnly=true
+VolatileTmp=true
+NoNewPrivileges=true
+UserNS=keep-id
+DropCapability=all
+AddCapability=NET_BIND_SERVICE
+
+# Environnement
+# EnvironmentFile=%h/stacks/{{APP_NAME}}/.env
+
+[Service]
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=default.target

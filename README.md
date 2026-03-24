@@ -13,11 +13,13 @@
 ## Philosophie
 Extension logicielle de l'Atelier. Ce dépôt permet d'installer et de configurer des environnements de conteneurs (**Docker** ou **Podman**) en respectant les principes de privilèges minimaux et d'isolation.
 
-## Capacités v0.1.0 "Foundations"
+## Capacités v0.2.0 "Foundations"
 * **Sélecteur de Moteur :** Script d'installation intelligent (Docker CE ou Podman Rootless).
 * **Hardened Docker :** Configuration du démon avec limitation des logs et isolation `userns`.
 * **Podman Rootless :** Mise en place d'un environnement sans privilèges root (Souveraineté maximale).
 * **Optimisation Réseau :** Configuration des ponts (bridges) compatible avec le firewalling Wilmore.
+* **Audit de Conformité :** Script d'auto-diagnostic pour valider l'isolation et le hardening.
+* **Résilience native :** Système de sauvegarde à chaud des volumes respectant les permissions Rootless.
 
 ## Prérequis
 Il est vivement recommandé d'avoir préalablement sécurisé l'hôte avec [Hardened Debian](https://github.com/Wilmore-Dynamics/hardened-debian).
@@ -37,6 +39,10 @@ Structure
 
 - `/tools` : Utilitaires de maintenance et de backup des volumes.
 
+
+*Note : Pour l'intégration de solutions métiers spécifiques (Analytics, ERP, Cloud), contactez [Wilmore Dynamics](mailto:contact@wilmoredynamics.com).*
+
+---
 <p align="right">
 <sub>© 2026 Wilmore Dynamics. Moins, mais mieux.</sub>
 </p>
